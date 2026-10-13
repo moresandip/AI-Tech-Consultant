@@ -1,0 +1,102 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ai_tech_consultant
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  task1:
+    build:
+      context: ./task1_knowledge_brain
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./chroma_data:/app/chroma_data
+    depends_on:
+      postgres:
+        condition: service_healthy
+    command: uvicorn main:app --host 0.0.0.0 --port 8001 --reload
+
+  task2:
+    build:
+      context: ./task2_inbox_agent
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "8002:8002"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    command: uvicorn main:app --host 0.0.0.0 --port 8002 --reload
+
+  task3:
+    build:
+      context: ./task3_meeting_sow
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "8003:8003"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    command: uvicorn main:app --host 0.0.0.0 --port 8003 --reload
+
+  # Streamlit UI for Task 1 (chatbot)
+  ui_task1:
+    build:
+      context: ./task1_knowledge_brain
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "8501:8501"
+    depends_on:
+      - task1
+    command: streamlit run ui/app.py --server.port 8501 --server.address 0.0.0.0
+
+  # Streamlit UI for Task 2 (inbox)
+  ui_task2:
+    build:
+      context: ./task2_inbox_agent
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "8502:8502"
+    depends_on:
+      - task2
+    command: streamlit run ui/app.py --server.port 8502 --server.address 0.0.0.0
+
+  # Streamlit UI for Task 3 (SOW)
+  ui_task3:
+    build:
+      context: ./task3_meeting_sow
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "8503:8503"
+    depends_on:
+      - task3
+    command: streamlit run ui/app.py --server.port 8503 --server.address 0.0.0.0
+
+volumes:
+  pgdata:
