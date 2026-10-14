@@ -1,0 +1,308 @@
+[
+  {
+    "sender_email": "john.smith@acme.com",
+    "sender_name": "John Smith",
+    "subject": "How do I add a new member category?",
+    "body": "Hi, I just set up my Brilliant Directories site and I'm trying to add a new membership category for 'Premium Members'. I can't find where to do this in the admin panel. Can you help?"
+  },
+  {
+    "sender_email": "sarah.jones@example.net",
+    "sender_name": "Sarah Jones",
+    "subject": "Payment not going through",
+    "body": "I've been trying to upgrade my plan for the past two days and every time I enter my credit card details, I get an error message saying 'Payment Failed'. My card is definitely valid and has funds. This is really frustrating. Please help ASAP."
+  },
+  {
+    "sender_email": "mike.wilson@startup.io",
+    "sender_name": "Mike Wilson",
+    "subject": "Refund request - charged twice",
+    "body": "Hello, I was charged twice for my monthly subscription this month ($79 each time). Please refund one of the charges immediately. My account is mike.wilson@startup.io and I was billed on October 12th."
+  },
+  {
+    "sender_email": "lisa.chen@photography.com",
+    "sender_name": "Lisa Chen",
+    "subject": "How to customize the homepage design?",
+    "body": "I want to change the colors and layout of my directory homepage to match my brand. I've looked in the design settings but I'm overwhelmed by the options. Is there a step-by-step guide for beginners?"
+  },
+  {
+    "sender_email": "robert.davis@techcorp.com",
+    "sender_name": "Robert Davis",
+    "subject": "Members can't log in after migration",
+    "body": "We migrated our member database last week using the import feature. Now about 30% of our members are saying they can't log in. They get 'Invalid credentials' even though their passwords haven't changed. What could be causing this?"
+  },
+  {
+    "sender_email": "amanda.taylor@freelance.io",
+    "sender_name": "Amanda Taylor",
+    "subject": "Can I add a blog to my directory?",
+    "body": "Hi there! I love the platform so far. I was wondering if there's a way to add a blog section to my directory website? I want to post articles about my niche to drive SEO traffic."
+  },
+  {
+    "sender_email": "james.brown@ngo.org",
+    "sender_name": "James Brown",
+    "subject": "Discount request for non-profit",
+    "body": "We're a registered 501(c)(3) non-profit organization running a community resource directory. Do you offer discounted pricing for non-profits? We have a very limited budget but your platform is exactly what we need."
+  },
+  {
+    "sender_email": "emily.white@realty.com",
+    "sender_name": "Emily White",
+    "subject": "How to set up recurring membership payments?",
+    "body": "I want to charge my members $49/month automatically. I've set up Stripe integration but I can't figure out how to create recurring billing plans. When members sign up, it only shows one-time payment options."
+  },
+  {
+    "sender_email": "david.martinez@retail.com",
+    "sender_name": "David Martinez",
+    "subject": "SEO not working - pages not indexed",
+    "body": "My directory has been live for 3 months but Google hasn't indexed most of my member pages. I've submitted the sitemap through Google Search Console but it shows 0 indexed pages. Is there something wrong with my SEO settings?"
+  },
+  {
+    "sender_email": "jennifer.garcia@wellness.net",
+    "sender_name": "Jennifer Garcia",
+    "subject": "Request for custom feature - booking system",
+    "body": "Hello, I run a wellness professional directory and my members desperately need an integrated booking system where clients can schedule appointments directly from member profiles. Is this something you offer or plan to add?"
+  },
+  {
+    "sender_email": "chris.anderson@tech.io",
+    "sender_name": "Chris Anderson",
+    "subject": "API documentation for member data export",
+    "body": "I'm a developer working on integrating Brilliant Directories with our CRM. Do you have API documentation for exporting member data? I need to sync member profiles to Salesforce automatically."
+  },
+  {
+    "sender_email": "patricia.thomas@business.com",
+    "sender_name": "Patricia Thomas",
+    "subject": "Members receiving duplicate welcome emails",
+    "body": "Every time a new member joins, they receive 3-4 welcome emails instead of just one. This looks very unprofessional and we're getting complaints. How do I fix this?"
+  },
+  {
+    "sender_email": "michael.jackson@directory.com",
+    "sender_name": "Michael Jackson",
+    "subject": "How to add custom fields to member profiles?",
+    "body": "I need to collect additional information from my members beyond the standard fields. Specifically, I want to add fields for 'Years of Experience', 'Certifications', and 'Service Area'. How do I add custom profile fields?"
+  },
+  {
+    "sender_email": "linda.harris@nonprofit.org",
+    "sender_name": "Linda Harris",
+    "subject": "Can't upload images larger than 2MB",
+    "body": "My members are complaining that they can't upload high-resolution photos for their profiles. The system rejects anything over 2MB. Is there a way to increase the upload limit? Many professional photos are 5-10MB."
+  },
+  {
+    "sender_email": "william.moore@consulting.com",
+    "sender_name": "William Moore",
+    "subject": "Follow up on ticket #48291 - still not resolved",
+    "body": "I submitted a support ticket 2 weeks ago about my payment gateway not working (ticket #48291). I haven't heard back and the problem is still affecting our revenue. This is unacceptable. Please escalate this immediately."
+  },
+  {
+    "sender_email": "barbara.taylor@local.net",
+    "sender_name": "Barbara Taylor",
+    "subject": "How to set up member approval workflow?",
+    "body": "I want to manually approve each new member before they can access the directory. Right now members are automatically approved. How do I change this so I can review applications first?"
+  },
+  {
+    "sender_email": "richard.jackson@auto.com",
+    "sender_name": "Richard Jackson",
+    "subject": "Stripe integration setup help needed",
+    "body": "I'm trying to connect my Stripe account to accept payments from members. I've entered my Stripe API keys in the payment settings but when I test it, I get an error: 'Invalid API Key'. I've double-checked the keys. What am I doing wrong?"
+  },
+  {
+    "sender_email": "susan.white@health.com",
+    "sender_name": "Susan White",
+    "subject": "Members not appearing in search results",
+    "body": "Several of our paid members are complaining that they don't show up when visitors search the directory. Their profiles are complete and their accounts are active. This is affecting our reputation. What could be wrong?"
+  },
+  {
+    "sender_email": "joseph.harris@media.com",
+    "sender_name": "Joseph Harris",
+    "subject": "Upgrade from Basic to Business plan",
+    "body": "I'd like to upgrade my account from the Basic plan ($29/month) to the Business plan ($79/month). Can you help me with this? I also want to make sure I won't lose any of my existing member data during the upgrade."
+  },
+  {
+    "sender_email": "carol.martin@events.com",
+    "sender_name": "Carol Martin",
+    "subject": "How to create member tiers with different pricing?",
+    "body": "I want to offer three levels of membership: Basic (free), Silver ($19/month), and Gold ($49/month) with different features for each tier. How do I set up multiple membership levels with different pricing and permissions?"
+  },
+  {
+    "sender_email": "thomas.garcia@legal.com",
+    "sender_name": "Thomas Garcia",
+    "subject": "GDPR compliance - member data export",
+    "body": "One of our European members has requested a copy of all their personal data under GDPR. How do I export a single member's data from the Brilliant Directories system? We need to comply within the 30-day deadline."
+  },
+  {
+    "sender_email": "jessica.rodriguez@food.net",
+    "sender_name": "Jessica Rodriguez",
+    "subject": "Mobile app for my directory",
+    "body": "Hi! Do you offer a mobile app version of the directory? Many of my users access the site from their phones and the mobile web experience isn't great. I'm interested in having an iOS and Android app."
+  },
+  {
+    "sender_email": "daniel.lewis@sports.com",
+    "sender_name": "Daniel Lewis",
+    "subject": "Email notifications not sending",
+    "body": "My automated email notifications have completely stopped working. Members aren't receiving password reset emails, approval notifications, or renewal reminders. I checked my SMTP settings and they look correct. Please help."
+  },
+  {
+    "sender_email": "helen.lee@art.com",
+    "sender_name": "Helen Lee",
+    "subject": "How to add social media links to profiles?",
+    "body": "How can members add their social media links (Instagram, Facebook, LinkedIn) to their profiles? I don't see any social media fields in the profile settings. My directory is for creative professionals who rely heavily on social media."
+  },
+  {
+    "sender_email": "mark.walker@finance.com",
+    "sender_name": "Mark Walker",
+    "subject": "Suspicious activity on my account",
+    "body": "I received an email saying my password was changed, but I didn't change it. I think someone has accessed my admin account without permission. Please help me secure my account immediately and investigate this."
+  },
+  {
+    "sender_email": "nancy.hall@education.org",
+    "sender_name": "Nancy Hall",
+    "subject": "Bulk import members from Excel",
+    "body": "We're migrating from another platform and have 500 member records in an Excel spreadsheet. How do I bulk import these members? What format does the import file need to be in?"
+  },
+  {
+    "sender_email": "kevin.allen@real-estate.com",
+    "sender_name": "Kevin Allen",
+    "subject": "How to set up geographic search/filtering?",
+    "body": "My directory is for local service providers and I need members to show up in search results based on their location. Can visitors filter by city, state, or zip code? How do I enable geographic search?"
+  },
+  {
+    "sender_email": "donna.young@beauty.com",
+    "sender_name": "Donna Young",
+    "subject": "Completely unhappy with recent update",
+    "body": "I am extremely unhappy with the latest update. You changed the member profile layout without any notice and now my members are very confused and angry. Their favorite 'quick contact' button is gone. Please revert this change or add the button back. This is unacceptable."
+  },
+  {
+    "sender_email": "paul.hernandez@construction.com",
+    "sender_name": "Paul Hernandez",
+    "subject": "Request quote for white-label solution",
+    "body": "We're an agency managing directories for 10 different clients. We're interested in a white-label solution where we can brand the platform with each client's logo and domain. Can you provide pricing for a reseller/agency plan?"
+  },
+  {
+    "sender_email": "betty.king@healthcare.net",
+    "sender_name": "Betty King",
+    "subject": "How to set up member renewal reminders?",
+    "body": "I want to send automatic email reminders to members 30 days, 7 days, and 1 day before their membership expires. How do I configure these automated renewal reminders?"
+  },
+  {
+    "sender_email": "george.scott@manufacturing.com",
+    "sender_name": "George Scott",
+    "subject": "Site speed is very slow",
+    "body": "My directory website is extremely slow to load - it takes 8-10 seconds on desktop and even longer on mobile. Google PageSpeed gives me a score of only 23. This is hurting my SEO and user experience. What can I do?"
+  },
+  {
+    "sender_email": "alice.green@nonprofit.net",
+    "sender_name": "Alice Green",
+    "subject": "Free trial extension request",
+    "body": "I've been using the 14-day free trial but I've been very busy with a family emergency and haven't had time to properly evaluate the platform. Could you extend my trial for another 14 days? I'm very interested in subscribing."
+  },
+  {
+    "sender_email": "frank.adams@retail.com",
+    "sender_name": "Frank Adams",
+    "subject": "How to add Google Analytics to my site?",
+    "body": "I want to track visitor behavior on my directory site using Google Analytics 4. How do I add my GA4 tracking code to the site? I have my Measurement ID ready."
+  },
+  {
+    "sender_email": "diana.baker@travel.com",
+    "sender_name": "Diana Baker",
+    "subject": "Members want to add photo galleries",
+    "body": "My travel consultant members want to showcase their work with photo galleries on their profiles. Currently they can only upload one profile photo. Is there a way to add a photo gallery or portfolio section to member profiles?"
+  },
+  {
+    "sender_email": "steven.gonzalez@tech.startup.com",
+    "sender_name": "Steven Gonzalez",
+    "subject": "Zapier integration help",
+    "body": "I'm trying to integrate Brilliant Directories with Zapier to automatically add new members to my Mailchimp email list. I've connected the apps in Zapier but the trigger isn't firing when new members join. What could be wrong?"
+  },
+  {
+    "sender_email": "ruth.nelson@consulting.net",
+    "sender_name": "Ruth Nelson",
+    "subject": "Can't access my admin panel - account locked",
+    "body": "I've been locked out of my admin panel. I tried to reset my password but the reset email isn't arriving (I've checked spam). My subscription is active and I have an important deadline. Please help me regain access immediately."
+  },
+  {
+    "sender_email": "walter.carter@design.co",
+    "sender_name": "Walter Carter",
+    "subject": "How to embed videos in member profiles?",
+    "body": "Can members embed YouTube or Vimeo videos in their profiles? I run a directory for video producers and being able to showcase their video work directly in their profile is essential."
+  },
+  {
+    "sender_email": "irene.mitchell@law.com",
+    "sender_name": "Irene Mitchell",
+    "subject": "Incorrect invoice amount",
+    "body": "My invoice for October shows $79 but I should be on the $49/month plan that I signed up for during your summer promotion. Please correct this and refund the $30 difference. I have the promotional email confirming the discounted rate."
+  },
+  {
+    "sender_email": "henry.perez@auto.dealer.com",
+    "sender_name": "Henry Perez",
+    "subject": "How to set up coupons and promo codes?",
+    "body": "I want to run a Black Friday promotion offering 50% off the first month for new members. How do I create a promo code or coupon that new members can enter during checkout?"
+  },
+  {
+    "sender_email": "gloria.roberts@wellness.org",
+    "sender_name": "Gloria Roberts",
+    "subject": "Thank you - incredible platform!",
+    "body": "I just wanted to send a quick note to say how absolutely fantastic your platform is. I launched my wellness practitioners directory 3 months ago and already have 150 paying members! The onboarding process was smooth and your support team has been wonderful. You've made my dream business a reality. Thank you!"
+  },
+  {
+    "sender_email": "raymond.turner@photography.net",
+    "sender_name": "Raymond Turner",
+    "subject": "How to restrict member profile visibility?",
+    "body": "I want to make member profiles visible only to logged-in (paying) members. Currently anyone can see all profiles for free. How do I set it so that profile details are hidden from non-members?"
+  },
+  {
+    "sender_email": "virginia.phillips@education.com",
+    "sender_name": "Virginia Phillips",
+    "subject": "PayPal integration not working",
+    "body": "I set up PayPal as a payment option but when members try to pay via PayPal, they get redirected to a blank page. Stripe works fine. I've checked my PayPal API credentials three times. What's wrong?"
+  },
+  {
+    "sender_email": "jack.campbell@sports.net",
+    "sender_name": "Jack Campbell",
+    "subject": "Need help setting up member rating/review system",
+    "body": "I want visitors to be able to rate and review service providers on my directory. Is there a built-in reviews and ratings feature? If not, can I integrate something like Trustpilot or Google Reviews?"
+  },
+  {
+    "sender_email": "helen.parker@medical.com",
+    "sender_name": "Helen Parker",
+    "subject": "Data breach concern",
+    "body": "I received a phishing email that had some of my account information in it. I'm concerned there may have been a data breach. Can you confirm whether Brilliant Directories has experienced any security incidents recently? I take my members' data security very seriously."
+  },
+  {
+    "sender_email": "oscar.evans@financial.com",
+    "sender_name": "Oscar Evans",
+    "subject": "Follow up: Premium support plan",
+    "body": "Last week I spoke with someone on your sales team about a premium support plan with dedicated account management. They said they'd send me details but I haven't received anything. Can you follow up on this or connect me with the right person?"
+  },
+  {
+    "sender_email": "tina.edwards@marketing.co",
+    "sender_name": "Tina Edwards",
+    "subject": "How to set up affiliate program for members?",
+    "body": "I'd like to offer my existing members a commission for referring new paying members. Does Brilliant Directories have a built-in affiliate or referral tracking system? If so, how do I set it up?"
+  },
+  {
+    "sender_email": "carl.collins@tech.org",
+    "sender_name": "Carl Collins",
+    "subject": "Slow customer support response times",
+    "body": "I submitted a ticket 5 days ago and still haven't received a response. For a platform I'm paying $79/month for, this level of support is completely unacceptable. I'm seriously considering cancelling my subscription and moving to a competitor."
+  },
+  {
+    "sender_email": "vera.stewart@nutrition.com",
+    "sender_name": "Vera Stewart",
+    "subject": "How to create a private/hidden directory?",
+    "body": "I want to create a members-only directory that isn't publicly accessible. Only people I approve should be able to see the directory listing. How do I make my entire directory private and require login to browse?"
+  },
+  {
+    "sender_email": "floyd.sanchez@construction.net",
+    "sender_name": "Floyd Sanchez",
+    "subject": "Cancellation request",
+    "body": "I'd like to cancel my Brilliant Directories subscription. My business has pivoted and I no longer need a directory platform. Please cancel my account effective immediately and confirm that I won't be billed next month. I'm on the $49/month plan."
+  },
+  {
+    "sender_email": "mildred.morris@arts.org",
+    "sender_name": "Mildred Morris",
+    "subject": "How to add a map to member profiles?",
+    "body": "I want each member profile to show a Google Map with their business location. Some of my members have asked for this feature. Is there a way to add an embedded map to profiles?"
+  },
+  {
+    "sender_email": "harvey.rogers@logistics.com",
+    "sender_name": "Harvey Rogers",
+    "subject": "Request for enterprise pricing",
+    "body": "We're a large association with 5,000+ members considering Brilliant Directories. Our standard features requirements go beyond what's listed on your pricing page. Can we schedule a call to discuss custom enterprise pricing and whether your platform can scale to our needs?"
+  }
+]
