@@ -1,0 +1,108 @@
+MEETING 1 — Initial Client Discovery Call
+Date: October 10, 2026
+Client: Raj Mehta, Owner — MedConnect India
+Consultant: Alex Rivera
+Duration: 52 minutes
+
+---
+
+Alex: Thanks for making the time, Raj. Can you walk me through what MedConnect does today?
+
+Raj: Sure. We run a directory of verified doctors and clinics across India. Right now it's just a simple website — a list of profiles. Patients come and search for a specialist, and they get a phone number. That's it.
+
+Alex: And what's the problem with that?
+
+Raj: Too basic. Patients want to book appointments online. Doctors want to manage their schedule. We want to charge doctors a monthly fee to be listed, and we're not collecting payments at all right now. It's all manual.
+
+Alex: Okay. So we're talking about three big things: online booking, membership payments, and a better search experience?
+
+Raj: Yes. And also — and this is important — we need the doctor profiles to look professional. Right now they're just a name and a phone number. Patients want to see qualifications, a photo, languages spoken, specialties, years of experience.
+
+Alex: How many doctors are in the directory right now?
+
+Raj: About 340. We want to get to 2000 in the next year.
+
+Alex: Got it. Let's go through each item. Online booking first — are you thinking a simple appointment request form, or actual calendar integration where patients see available slots?
+
+Raj: Ideally calendar integration. Doctors would log in, set their availability, and patients book a slot.
+
+Alex: That's a significant build. Could we start with an appointment request form that sends an email to the doctor, and they confirm manually? Then build the calendar in phase 2?
+
+Raj: Hmm. I'd prefer full calendar but if it's much cheaper, okay, let's do request form first.
+
+Alex: Good. For payments — what's the plan? Monthly subscription for doctors?
+
+Raj: Yes. Three tiers. Basic, listed in directory, free. Silver, profile + appointment requests, 999 rupees a month. Gold, everything including promoted placement in search results, 2499 rupees.
+
+Alex: And payment gateway — do you have a preference? Razorpay? Stripe?
+
+Raj: Razorpay. All our clients are in India.
+
+Alex: Razorpay integration we can do. Now, the search — what does "better search" mean for you?
+
+Raj: Right now there's no filter at all. I want patients to filter by city, specialty, language, and whether they accept new patients.
+
+Alex: The platform has geographic filtering built in. Specialty and language would need custom fields on the profile. "Accepts new patients" is also a custom field. That's all doable.
+
+Raj: Wait — it has geographic filtering already?
+
+Alex: Yes, it's a built-in feature. We just configure it. No custom dev needed for that part.
+
+Raj: Oh, great! That saves money I guess.
+
+Alex: It does. For the profile — you mentioned photo, qualifications, specialties, languages, years of experience. Anything else?
+
+Raj: Yes, registration number. MBBS or MD or whatever — the degree. Clinic address with a map. And ideally a short patient testimonial or review section.
+
+Alex: Reviews are a big feature. Verified reviews or just open submissions?
+
+Raj: Only verified patients. So someone who actually booked through us.
+
+Alex: That ties back to the booking system. If we do just request forms in phase 1, we can't verify. Could we start with unverified reviews and add verification in phase 2?
+
+Raj: Okay, that's fair.
+
+Alex: Any other features you're thinking of?
+
+Raj: Mobile app. Is that possible?
+
+Alex: The platform is mobile-responsive so it works on phones, but a native app is a separate project entirely and would cost significantly more.
+
+Raj: Let's skip the app for now. One more thing — I want to send automatic emails. When a patient submits an appointment request, the doctor gets an email. When a doctor's subscription is about to expire, they get a reminder.
+
+Alex: Both of those are built into the platform. Automated email notifications for bookings and subscription reminders — no custom work needed.
+
+Raj: Really? Okay good. So what about SEO? I want to rank on Google when someone searches "cardiologist in Mumbai."
+
+Alex: SEO optimization is partly built-in — the platform generates proper meta tags and sitemaps automatically. But you'd also want us to set up the right page structure and maybe write category descriptions for major specialties and cities. That's content work.
+
+Raj: Yes, please include that. And lastly — I want to be able to see reports. How many patients searched, how many bookings, which doctor profiles get the most views.
+
+Alex: Basic analytics can connect Google Analytics for free. More detailed reports with booking conversion rates would need a custom dashboard.
+
+Raj: Let's do Google Analytics first and see if we need more.
+
+Alex: What's your timeline?
+
+Raj: I need to launch in 3 months. We have a conference in January where we're showcasing this.
+
+Alex: That's tight but doable if we focus on what we said. Budget range?
+
+Raj: My board approved up to $8,000 USD.
+
+Alex: Okay. That's workable for what we've discussed. I'll put together a scope and proposal this week.
+
+Raj: Perfect. One more question — can we do it in Hindi and English? Bilingual?
+
+Alex: That's a multilingual setup. It's possible but adds complexity and time. We'd need to decide which pages are bilingual and who translates the content.
+
+Raj: Let's put it as a nice-to-have. Focus on English first.
+
+Alex: Agreed. Anything else?
+
+Raj: No, I think that covers it. Send me the proposal and we'll move fast.
+
+Alex: Will do. Talk soon.
+
+---
+END OF TRANSCRIPT

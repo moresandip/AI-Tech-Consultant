@@ -1,0 +1,120 @@
+MEETING 3 — New Client Discovery: StyleHub Directory
+Date: October 14, 2026
+Client: Priya Sharma, Founder — StyleHub
+Consultant: Alex Rivera
+Duration: 45 minutes
+
+---
+
+Alex: Hi Priya, thanks for reaching out. Tell me about StyleHub.
+
+Priya: We're building a premium directory for fashion stylists, makeup artists, and personal shoppers in Mumbai, Delhi, and Bangalore. Think of it as a verified talent marketplace for the luxury fashion industry.
+
+Alex: Who's your target audience — people hiring these professionals?
+
+Priya: Exactly. High-net-worth individuals, corporate clients, and fashion magazines. They want vetted, professional talent. Not just anyone.
+
+Alex: So quality curation matters. How do stylists get listed?
+
+Priya: They apply, we review their portfolio, and we approve them. We're not open to everyone.
+
+Alex: The platform has a manual approval workflow built in. We can configure it so every new member goes into a "pending" state until you review and approve.
+
+Priya: Oh, that exists already? Great. Now, the profiles are really important to us. These are creative professionals. They need to be able to showcase their work — portfolio photos, a short video reel, their notable clients, press mentions, rates.
+
+Alex: Portfolio photos — yes. Video is more complex. Does the video need to be hosted on our platform or can we embed YouTube/Vimeo links?
+
+Priya: YouTube embed is fine. They'll upload to YouTube themselves.
+
+Alex: Good, YouTube embed is straightforward.
+
+Priya: Each stylist also needs to be searchable by style speciality — bridal, editorial, corporate, casual — and by city.
+
+Alex: Geographic filtering and custom category filtering — both built-in features. Just configuration.
+
+Priya: Perfect. Now, I want to monetize this. Stylists pay to be listed. But I also want a commission model. When a client books a stylist through StyleHub, I take 15%.
+
+Alex: Commission-based bookings are more complex. That requires a payment split system. The platform handles subscription payments natively, but commission splits need custom work.
+
+Priya: How custom?
+
+Alex: We'd build an escrow-style system: client pays through StyleHub, we hold it, take 15%, send the rest to the stylist. Maybe 25-35 hours of custom development.
+
+Priya: That's what I want for the premium version. Can we start with just flat subscription for stylists and add commission later?
+
+Alex: Yes. Phase 1: stylists pay a monthly subscription. Phase 2: commission model.
+
+Priya: Okay. Monthly subscription — 2,999 rupees for basic profile, 5,999 for featured placement and priority search ranking.
+
+Alex: Two tiers. Razorpay?
+
+Priya: Yes.
+
+Alex: Easy. What about the client side? Do clients need accounts, or can they browse and contact freely?
+
+Priya: Clients must register to view contact details. Free registration for clients, paid subscription for stylists.
+
+Alex: We can configure profile detail visibility to logged-in users only. Platform feature.
+
+Priya: Good. I also want a messaging system. Clients should be able to message stylists through the platform without exposing the stylist's personal number.
+
+Alex: In-platform messaging is a significant custom feature. Probably 20-30 hours. Alternative: we use a contact form that goes to the stylist's email but doesn't expose the number.
+
+Priya: Contact form for now. Messaging in phase 2.
+
+Alex: Smart. Reviews — do you want a review system?
+
+Priya: Yes, but only from verified clients. After a booking or interaction. I don't want open reviews — this is a premium brand.
+
+Alex: Verified reviews tied to bookings. For phase 1 since we're not doing commission bookings, we could let you manually mark clients as "verified reviewer" and they can then leave a review.
+
+Priya: That works for now.
+
+Alex: Any integrations you're thinking of?
+
+Priya: Instagram. I want the stylist's latest Instagram posts to show on their profile automatically.
+
+Alex: Instagram API integration. It's possible but requires each stylist to authenticate their Instagram account. Maybe 15-20 hours.
+
+Priya: Is it worth it?
+
+Alex: For a fashion directory, absolutely. It's a differentiator.
+
+Priya: Include it.
+
+Alex: What about the overall design aesthetic? You mentioned premium.
+
+Priya: Very high-end. Dark backgrounds, gold accents. Think Vogue website meets directory.
+
+Alex: That's a custom premium theme — significant design work. Maybe 20-30 hours.
+
+Priya: Non-negotiable. The brand has to feel luxury.
+
+Alex: Understood. Timeline?
+
+Priya: 2 months to soft launch. 3 months to public launch.
+
+Alex: Budget?
+
+Priya: I have 12,000 USD including everything for phase 1.
+
+Alex: With the Instagram integration and premium design, that's going to be tight but doable if we scope carefully. What would you cut if we needed to?
+
+Priya: Cut the Instagram integration before you cut the design. But I really want both.
+
+Alex: Let me work through the numbers and come back to you. Anything else?
+
+Priya: One thing — I want to be able to feature stylists who are trending. Like a "This Week's Top Stylists" section on the homepage. It rotates weekly.
+
+Alex: That's a featured rotation — configuration work, maybe 4-5 hours.
+
+Priya: And SEO — I need to rank for searches like "best bridal stylist in Mumbai."
+
+Alex: Same as other clients — platform does the technical SEO, you'll need to write good content for specialty and city pages.
+
+Priya: My team will handle content. Okay I think that covers it.
+
+Alex: Great. I'll put together a full proposal.
+
+---
+END OF TRANSCRIPT

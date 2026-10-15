@@ -1,0 +1,83 @@
+MEETING 2 — Follow-Up Call: MedConnect India Scope Changes
+Date: October 17, 2026
+Client: Raj Mehta, Owner — MedConnect India
+Consultant: Alex Rivera
+Duration: 38 minutes
+Context: Follow-up to Meeting 1. Raj has shown the initial proposal to his board.
+
+---
+
+Alex: Good to hear from you Raj. How did the board meeting go?
+
+Raj: Mixed reaction honestly. They loved the idea but they had a lot of questions and some changes.
+
+Alex: Tell me.
+
+Raj: First — they want the appointment request form to be more detailed. Right now we said just name, phone, and reason for visit. They want: symptom checklist, which insurance they have, preferred time slots, and whether it's urgent or routine.
+
+Alex: That changes the form from simple to medium complexity. We can add those fields.
+
+Raj: Second — and this is the big one — they want to launch in 6 weeks, not 3 months. There's a board presentation on November 28th.
+
+Alex: Six weeks is very aggressive. We'd have to cut scope significantly. I'd suggest we drop: custom reviews, the full doctor dashboard, and the analytics dashboard. Focus on profiles, payments, search filters, and the appointment request form.
+
+Raj: Can you at least have profiles and search ready in 4 weeks and payments in 6?
+
+Alex: If your team is responsive with content and access, yes.
+
+Raj: Okay. Third change — they don't want three membership tiers. They want two. Free and Premium at 1499 rupees.
+
+Alex: That actually simplifies our payment setup. Good.
+
+Raj: Fourth — my board wants a WhatsApp integration. When a patient submits a booking request, the doctor also gets a WhatsApp message, not just an email.
+
+Alex: WhatsApp integration through the Twilio API or WhatsApp Business Cloud API. It's possible but this is new scope — it wasn't in the original discussion.
+
+Raj: I know, I know. Is it expensive?
+
+Alex: Roughly 12-15 additional hours. We'd need to set up the API, handle failures, and test with Indian numbers.
+
+Raj: Can we include it?
+
+Alex: We can quote it separately. It's out of scope from what we agreed last time.
+
+Raj: Fine, quote it as an add-on.
+
+Raj: Fifth — can we add a "Doctor of the Month" spotlight section on the homepage? My board wants to sell this to doctors as a premium promotion.
+
+Alex: A featured doctor section on the homepage — that's a design and configuration change. Maybe 3-4 hours.
+
+Raj: Add it in.
+
+Alex: What happened to the SEO content writing we discussed? Category descriptions for specialties and cities?
+
+Raj: Board said we should do it ourselves to save money. Remove that from scope.
+
+Alex: Understood. We'll set up the SEO structure and they'll write their own content.
+
+Raj: One more thing — they want the site to be in dark mode. Like a dark navy background.
+
+Alex: Dark mode is a design theme change. Given your timeline, we can do a dark theme but it adds design time. Maybe 6-8 hours.
+
+Raj: It's important. Keep it.
+
+Alex: Okay. To summarize the changes: more detailed appointment form, 6-week timeline, two tiers instead of three, remove SEO content writing, add "Doctor of the Month" section, dark theme design, and WhatsApp as a separate add-on quote.
+
+Raj: Yes, that's right. And the analytics dashboard — let's push that to phase 2 completely.
+
+Alex: Already dropped it. What about the review system?
+
+Raj: Also phase 2. Let's not overcomplicate phase 1.
+
+Alex: Smart. Budget — with these changes, are we still at $8,000?
+
+Raj: The board said if we can hit $7,000 for the core and $1,500 for WhatsApp as an add-on, that works.
+
+Alex: I'll revise the proposal. The dark theme and Doctor of the Month are new items. WhatsApp is an add-on. Everything else we're cutting or simplifying. I'll get you the updated proposal by end of week.
+
+Raj: Perfect. And Alex — the November 28th deadline is non-negotiable.
+
+Alex: Understood. We'll make it work.
+
+---
+END OF TRANSCRIPT
