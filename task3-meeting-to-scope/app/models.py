@@ -5,8 +5,7 @@ from __future__ import annotations
 import uuid
 from datetime import datetime
 
-from sqlalchemy import Boolean, DateTime, Float, Integer, String, Text, func
-from sqlalchemy.dialects.postgresql import JSONB
+from sqlalchemy import Boolean, DateTime, Float, Integer, String, Text, func, JSON
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
 
@@ -42,13 +41,13 @@ class ScopeOfWork(Base):
     version: Mapped[int] = mapped_column(Integer, default=1)
 
     # Extracted requirements
-    requirements: Mapped[list | None] = mapped_column(JSONB)  # list of {title, description, type}
+    requirements: Mapped[list | None] = mapped_column(JSON)  # list of {title, description, type}
 
     # Feasibility checks against Knowledge Brain
-    feasibility: Mapped[list | None] = mapped_column(JSONB)  # list of {req, can_be_done_with_setting, detail}
+    feasibility: Mapped[list | None] = mapped_column(JSON)  # list of {req, can_be_done_with_setting, detail}
 
     # Task list with estimates
-    tasks: Mapped[list | None] = mapped_column(JSONB)  # list of {task, hours_min, hours_max, type}
+    tasks: Mapped[list | None] = mapped_column(JSON)  # list of {task, hours_min, hours_max, type}
 
     # SOW document (markdown)
     sow_markdown: Mapped[str | None] = mapped_column(Text)
@@ -58,9 +57,9 @@ class ScopeOfWork(Base):
 
     # Diff from previous version (for follow-up meetings)
     diff_summary: Mapped[str | None] = mapped_column(Text)
-    new_items: Mapped[list | None] = mapped_column(JSONB)
-    changed_items: Mapped[list | None] = mapped_column(JSONB)
-    out_of_scope_items: Mapped[list | None] = mapped_column(JSONB)
+    new_items: Mapped[list | None] = mapped_column(JSON)
+    changed_items: Mapped[list | None] = mapped_column(JSON)
+    out_of_scope_items: Mapped[list | None] = mapped_column(JSON)
 
     # Totals
     total_hours_min: Mapped[float | None] = mapped_column(Float)
@@ -74,7 +73,7 @@ class ScopeOfWork(Base):
     approved_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
 
     # Pipeline metadata
-    pipeline_steps: Mapped[list | None] = mapped_column(JSONB)  # step log
+    pipeline_steps: Mapped[list | None] = mapped_column(JSON)  # step log
     model_used_extraction: Mapped[str | None] = mapped_column(String(64))
     model_used_proposal: Mapped[str | None] = mapped_column(String(64))
     latency_ms_total: Mapped[int | None] = mapped_column(Integer)

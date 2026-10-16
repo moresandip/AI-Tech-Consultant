@@ -6,9 +6,8 @@ import uuid
 from datetime import datetime
 
 from sqlalchemy import (
-    Boolean, DateTime, Float, ForeignKey, Integer, String, Text, func,
+    Boolean, DateTime, Float, ForeignKey, Integer, String, Text, func, JSON,
 )
-from sqlalchemy.dialects.postgresql import UUID, JSONB
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 
 
@@ -78,7 +77,7 @@ class QueryLog(Base):
     question: Mapped[str] = mapped_column(Text, nullable=False)
     answer: Mapped[str | None] = mapped_column(Text)
     confidence: Mapped[float | None] = mapped_column(Float)
-    sources: Mapped[dict | None] = mapped_column(JSONB)
+    sources: Mapped[dict | None] = mapped_column(JSON)
     escalated: Mapped[bool] = mapped_column(Boolean, default=False)
     rating: Mapped[int | None] = mapped_column(Integer)          # 1-5
     feedback_comment: Mapped[str | None] = mapped_column(Text)
