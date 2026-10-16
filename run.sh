@@ -22,36 +22,34 @@ fi
 
 # 3. Local background processes
 ROOT_DIR=$(pwd)
-echo "[*] Starting Task 1 API on port 8001..."
+echo "[*] Starting Task 1: Knowledge Brain (Python FastAPI) on port 8001..."
 (cd "$ROOT_DIR/task1-knowledge-brain" && uvicorn app.main:app --port 8001 --reload) &
 PID1=$!
 
-echo "[*] Starting Task 2 API on port 8002..."
-(cd "$ROOT_DIR/task2-inbox-agent" && uvicorn src.main:app --port 8002 --reload) &
+echo "[*] Starting Task 2: Inbox Agent (TypeScript Node.js) on port 8002..."
+(cd "$ROOT_DIR/task2-inbox-agent" && npm start) &
 PID2=$!
 
-echo "[*] Starting Task 3 API on port 8003..."
+echo "[*] Starting Task 3: Meeting to Scope (Python FastAPI) on port 8003..."
 (cd "$ROOT_DIR/task3-meeting-to-scope" && uvicorn app.main:app --port 8003 --reload) &
 PID3=$!
 
 sleep 2
 
-echo "[*] Starting Streamlit UIs (8501, 8502, 8503)..."
+echo "[*] Starting Streamlit UIs..."
 (cd "$ROOT_DIR/task1-knowledge-brain" && streamlit run app/ui.py --server.port 8501) &
 PID4=$!
-(cd "$ROOT_DIR/task2-inbox-agent" && streamlit run src/ui.py --server.port 8502) &
-PID5=$!
 (cd "$ROOT_DIR/task3-meeting-to-scope" && streamlit run app/ui.py --server.port 8503) &
-PID6=$!
+PID5=$!
 
 echo ""
 echo "All services launched successfully!"
 echo "----------------------------------------------------------"
-echo "Task 1 (Knowledge Brain)  : http://localhost:8001/docs  | UI: http://localhost:8501"
-echo "Task 2 (Inbox Agent)      : http://localhost:8002/docs  | UI: http://localhost:8502"
-echo "Task 3 (Meeting to Scope) : http://localhost:8003/docs  | UI: http://localhost:8503"
+echo "Task 1 (Knowledge Brain - Python)    : http://localhost:8001/docs  | UI: http://localhost:8501"
+echo "Task 2 (Inbox Agent - TypeScript)    : API & UI: http://localhost:8002"
+echo "Task 3 (Meeting to Scope - Python)   : http://localhost:8003/docs  | UI: http://localhost:8503"
 echo "----------------------------------------------------------"
 echo "Press Ctrl+C to terminate all services."
 
-trap "kill $PID1 $PID2 $PID3 $PID4 $PID5 $PID6 2>/dev/null || true" SIGINT SIGTERM EXIT
+trap "kill $PID1 $PID2 $PID3 $PID4 $PID5 2>/dev/null || true" SIGINT SIGTERM EXIT
 wait

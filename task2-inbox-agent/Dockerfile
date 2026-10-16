@@ -1,6 +1,7 @@
-FROM python:3.12-slim
+FROM node:22-alpine
 WORKDIR /app
-COPY pyproject.toml ./
-RUN pip install --no-cache-dir -e .
+COPY package*.json ./
+RUN npm install
 COPY . .
-EXPOSE 8002 8502
+EXPOSE 8002
+CMD ["npm", "start"]

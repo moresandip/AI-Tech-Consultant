@@ -31,19 +31,17 @@ This project automates all three and connects them through a shared brain.
             ┌──────────▼──────┐    ┌──────────▼───────┐
             │  Task 2: Inbox  │    │ Task 3: Meeting  │
             │     Agent       │    │     → SOW        │
-            │  (FastAPI)      │    │  (FastAPI)       │
+            │ (TypeScript/Node│    │  (FastAPI)       │
             │                 │    │                  │
             │ classify(Haiku) │    │ Agent pipeline:  │
             │ draft(Sonnet)   │    │ 1. Transcriber   │
             │ learn(feedback) │    │ 2. Extractor     │
             │ auto-approve    │    │ 3. Feasibility   │
             │                 │    │ 4. Estimator     │
-            └────────┬────────┘    │ 5. SOW Writer    │
-                     │             │ 6. Proposal(Opus)│
-            ┌────────▼────────┐    │ 7. Diff Agent    │
-            │  Streamlit UI   │    └──────────┬───────┘
-            │  (port 8502)    │               │
-            └─────────────────┘    ┌──────────▼───────┐
+            │                 │    │ 5. SOW Writer    │
+            │ Web Dashboard UI│    │ 6. Proposal(Opus)│
+            │ (port 8002)     │    │ 7. Diff Agent    │
+            └─────────────────┘    └──────────┬───────┘
                                    │  Streamlit UI    │
                                    │  (port 8503)     │
                                    └──────────────────┘
