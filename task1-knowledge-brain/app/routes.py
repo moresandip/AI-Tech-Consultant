@@ -156,7 +156,7 @@ async def resolve_human_task(
     body: HumanAnswerRequest,
     session: AsyncSession = Depends(get_session),
 ) -> dict:
-    from core.embedder import upsert_human_answer
+    from retrieval.embedder import upsert_human_answer
 
     result = await session.execute(
         select(HumanTaskModel).where(HumanTaskModel.id == task_id)
@@ -196,14 +196,11 @@ async def submit_feedback(
 
 @router.get("/stats", response_model=KBStats, tags=["Meta"])
 async def stats(session: AsyncSession = Depends(get_session)) -> KBStats:
-    from db.models import ScrapeMeta
-    from core.embedder import get_chroma_stats
+    from app.models import ScrapeMeta, ImageCaption
+    from retrieval.embedder import get_chroma_stats
 
-    article_count = (await session.execute(select(func.count(Article.id)))).scalar()
-    image_count_row = await session.execute(select(func.count()).select_from(
-        __import__("db.models", fromlist=["ImageCaption"]).ImageCaption
-    ))
-    image_count = image_count_row.scalar()
+    article_count = (await session.execute(select(func.count(Article.id)))).scalar() or 0
+    image_count = (await session.execute(select(func.count(ImageCaption.id)))).scalar() or 0
 
     chroma = get_chroma_stats()
     last_full = await session.execute(
