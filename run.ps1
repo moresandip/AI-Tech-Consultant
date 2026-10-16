@@ -1,4 +1,4 @@
-# AI Tech Consultant — One-Command Startup Script (PowerShell / Windows)
+# AI Tech Consultant - One-Command Startup Script (PowerShell / Windows)
 [CmdletBinding()]
 param (
     [switch]$Docker = $false,
@@ -6,7 +6,7 @@ param (
 )
 
 Write-Host "==========================================================" -ForegroundColor Cyan
-Write-Host "       AI TECH CONSULTANT — MULTI-AGENT PLATFORM          " -ForegroundColor Cyan
+Write-Host "       AI TECH CONSULTANT - MULTI-AGENT PLATFORM          " -ForegroundColor Cyan
 Write-Host "==========================================================" -ForegroundColor Cyan
 
 # 1. Environment Check
@@ -51,10 +51,11 @@ if (-not $NoUI) {
     Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$RootPath\task3-meeting-to-scope'; streamlit run app/ui.py --server.port 8503" | Out-Null
 }
 
-Write-Host "`nAll services launched successfully!" -ForegroundColor Green
+Write-Host ""
+Write-Host "All services launched successfully!" -ForegroundColor Green
 Write-Host "----------------------------------------------------------"
 Write-Host "Task 1 (Knowledge Brain - Python)    : http://localhost:8001/docs  | UI: http://localhost:8501"
-Write-Host "Task 2 (Inbox Agent - TypeScript)    : API & UI: http://localhost:8002"
+Write-Host "Task 2 (Inbox Agent - TypeScript)    : API and UI: http://localhost:8002"
 Write-Host "Task 3 (Meeting to Scope - Python)   : http://localhost:8003/docs  | UI: http://localhost:8503"
 Write-Host "----------------------------------------------------------"
 Write-Host "Press Ctrl+C or close child terminal windows to terminate."
