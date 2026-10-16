@@ -30,35 +30,35 @@ $RootPath = (Get-Item -Path ".").FullName
 
 # Start Task 1: Knowledge Brain API (Port 8001)
 Write-Host "  -> Starting Task 1 API on http://localhost:8001" -ForegroundColor Yellow
-$p1 = Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$RootPath\task1_knowledge_brain'; uvicorn main:app --port 8001 --reload" -PassThru
+Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$RootPath\task1-knowledge-brain'; uvicorn app.main:app --port 8001 --reload" | Out-Null
 
 # Start Task 2: Inbox Agent API (Port 8002)
 Write-Host "  -> Starting Task 2 API on http://localhost:8002" -ForegroundColor Yellow
-$p2 = Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$RootPath\task2_inbox_agent'; uvicorn main:app --port 8002 --reload" -PassThru
+Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$RootPath\task2-inbox-agent'; uvicorn src.main:app --port 8002 --reload" | Out-Null
 
-# Start Task 3: Meeting-to-SOW API (Port 8003)
+# Start Task 3: Meeting-to-Scope API (Port 8003)
 Write-Host "  -> Starting Task 3 API on http://localhost:8003" -ForegroundColor Yellow
-$p3 = Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$RootPath\task3_meeting_sow'; uvicorn main:app --port 8003 --reload" -PassThru
+Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$RootPath\task3-meeting-to-scope'; uvicorn app.main:app --port 8003 --reload" | Out-Null
 
 if (-not $NoUI) {
     Start-Sleep -Seconds 2
     # Start Task 1 UI
     Write-Host "  -> Starting Task 1 UI on http://localhost:8501" -ForegroundColor Cyan
-    Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$RootPath\task1_knowledge_brain'; streamlit run ui/app.py --server.port 8501" | Out-Null
+    Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$RootPath\task1-knowledge-brain'; streamlit run app/ui.py --server.port 8501" | Out-Null
 
     # Start Task 2 UI
     Write-Host "  -> Starting Task 2 UI on http://localhost:8502" -ForegroundColor Cyan
-    Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$RootPath\task2_inbox_agent'; streamlit run ui/app.py --server.port 8502" | Out-Null
+    Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$RootPath\task2-inbox-agent'; streamlit run src/ui.py --server.port 8502" | Out-Null
 
     # Start Task 3 UI
     Write-Host "  -> Starting Task 3 UI on http://localhost:8503" -ForegroundColor Cyan
-    Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$RootPath\task3_meeting_sow'; streamlit run ui/app.py --server.port 8503" | Out-Null
+    Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$RootPath\task3-meeting-to-scope'; streamlit run app/ui.py --server.port 8503" | Out-Null
 }
 
 Write-Host "`nAll services launched successfully!" -ForegroundColor Green
 Write-Host "----------------------------------------------------------"
 Write-Host "Task 1 (Knowledge Brain)  : http://localhost:8001/docs  | UI: http://localhost:8501"
 Write-Host "Task 2 (Inbox Agent)      : http://localhost:8002/docs  | UI: http://localhost:8502"
-Write-Host "Task 3 (Meeting to SOW)   : http://localhost:8003/docs  | UI: http://localhost:8503"
+Write-Host "Task 3 (Meeting to Scope) : http://localhost:8003/docs  | UI: http://localhost:8503"
 Write-Host "----------------------------------------------------------"
 Write-Host "Press Ctrl+C or close child terminal windows to terminate."

@@ -15,31 +15,21 @@ docker compose up --build   # starts all services
 | Task 1 Chatbot UI | http://localhost:8501 |
 | Task 2 API (Inbox Agent) | http://localhost:8002/docs |
 | Task 2 Inbox UI | http://localhost:8502 |
-| Task 3 API (Meeting → SOW) | http://localhost:8003/docs |
+| Task 3 API (Meeting → Scope) | http://localhost:8003/docs |
 | Task 3 SOW Builder UI | http://localhost:8503 |
 
-## Quick Start (Local — no Docker)
+## Quick Start (Local — One Command)
 
+```powershell
+# Windows PowerShell
+.\run.ps1
+```
 ```bash
-cp .env.example .env        # add your ANTHROPIC_API_KEY and DATABASE_URL
-pip install -e task1_knowledge_brain
-pip install -e task2_inbox_agent
-pip install -e task3_meeting_sow
-
-# Terminal 1 — Task 1
-cd task1_knowledge_brain && uvicorn main:app --port 8001 --reload
-
-# Terminal 2 — Task 2
-cd task2_inbox_agent && uvicorn main:app --port 8002 --reload
-
-# Terminal 3 — Task 3
-cd task3_meeting_sow && uvicorn main:app --port 8003 --reload
-
-# Terminal 4 — UIs (one each)
-cd task1_knowledge_brain && streamlit run ui/app.py --server.port 8501
+# Linux / macOS / WSL
+chmod +x run.sh && ./run.sh
 ```
 
-## First Run: seed the Knowledge Brain
+## First Run: Seed the Knowledge Brain
 
 ```bash
 # Trigger a full scrape (runs inside Task 1):
@@ -47,21 +37,43 @@ curl -X POST http://localhost:8001/api/scrape/full \
      -H "X-API-Key: dev-secret-task1"
 ```
 
-This takes ~15 minutes on first run (polite 1.5 s delay between pages).  
-Daily sync runs automatically at 02:00 UTC and only re-processes changed pages.
+This takes ~15 minutes on first run (polite 1.5s delay between pages).  
+Daily sync runs automatically at 02:00 UTC and only re-processes changed pages via SHA-256 hashes.
 
-## Project structure
+## Project Structure
 
 ```
 ai-tech-consultant/
-├── task1_knowledge_brain/   Python · FastAPI · ChromaDB · RAG chatbot
-├── task2_inbox_agent/       Python · FastAPI · email drafting + learning
-├── task3_meeting_sow/       Python · FastAPI · multi-agent SOW pipeline
-├── docker-compose.yml
-└── .env.example
+├── task1-knowledge-brain/
+│   ├── app/                 # API and business logic
+│   ├── ingestion/           # Sitemap, crawling, parsing
+│   ├── retrieval/           # Chunking, embeddings, search
+│   ├── multimodal/          # Image understanding
+│   ├── evaluation/          # Knowledge tests
+│   └── tests/
+├── task2-inbox-agent/
+│   ├── src/
+│   │   ├── email/            # Input and email classification
+│   │   ├── knowledge-client/ # Calls Task 1 API
+│   │   ├── drafting/         # Draft generation
+│   │   ├── feedback/         # Human edits and learning
+│   │   └── evaluation/
+│   └── tests/
+├── task3-meeting-to-scope/
+│   ├── app/                 # API & SOW models
+│   ├── agents/              # Separate agent responsibilities
+│   ├── transcripts/         # Discovery & follow-up calls
+│   ├── scope-diff/          # Compare meeting versions
+│   ├── evaluation/          # SOW pipeline evals
+│   └── tests/
+├── shared-docs/             # Cross-task architecture & API contracts
+├── README.md
+├── DESIGN.md
+├── EVALS.md
+└── AI_LOG.md
 ```
 
-## Architecture in one sentence
+## Architecture in One Sentence
 
-Task 1 scrapes, embeds and answers questions.  
-Tasks 2 and 3 call Task 1's `/api/query` endpoint — they never touch the vector DB directly.
+Task 1 scrapes, embeds, and answers questions.  
+Tasks 2 and 3 call Task 1's `/api/query` endpoint — they never touch the vector database directly.
